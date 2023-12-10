@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@100&display=swap');
+
+
+.App{
+    width:60%;
+    margin:3em auto;
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input{
+    font-family: Poppins;
+    font-weight: 900;
+    font-size:0.9rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App form{
+    width:100%;
+    display: flex;
+    background-color: #fff;
+    border-radius:100px;
+    overflow: hidden;
+    position:sticky;
+    top:0;
+    box-shadow:1px 4px 10px #505050e0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+form *:first-child{
+    flex:1;
+    padding: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.todo{
+    display: flex;
+    width:100%;
+    padding:0.5rem;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#fff;
+    color:black;
+    text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo div{
+    display: flex;
+}
+
+.todo div p{
+   margin-left:0.5rem;
+}
+
+form *{
+    border:none;
+}
+
+form input:active,form input:focus,form input:hover,form input:focus-within{
+    outline: none;
+    border:none;
+}
+
+.App>div{
+   border-radius:10px;
+   overflow: hidden;
+}
+
+form button{
+    font-size: 1.1em;
+    background-color: rgb(255, 217, 0);
+    color:#fff;
+}
+
+.todo{
+    border-bottom: 1px solid black;
+}
+
+@media (max-width:700px){
+    .App{
+        width:90%;
+    }
+
+    input{
+        font-family: Poppins;
+        font-weight: 900;
+        font-size:0.9rem;
+    }
+
 }
